@@ -1,0 +1,101 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #192939; /* Light background color */
+    color: #333; /* Dark text for contrast */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 23.5px; /* Padding to ensure content is not flush against the edges */
+}
+
+/* Site title styling */
+#siteTitle {
+    font-family: 'Caveat', cursive; /* Use the Caveat font */
+	color: #f5c4ac; /* Colour of the quote */
+    font-size: 2em; /* H1 size, adjust as needed */
+    position: absolute; /* Position it absolutely */
+    top: 10px; /* 10px from the top */
+    left: 10px; /* 10px from the left */
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+/* Quote display */
+#quoteDisplay {
+    font-size: 2em; /* Large font size for the quote */
+	color: #f5c4ac; /* Colour of the quote */
+    max-width: 600px; /* Fixed max width for the quote */
+    text-align: center; /* Center the quote text */
+    margin-bottom: 14px; /* Space between quote and buttons */
+}
+
+/* Buttons container */
+#buttonsContainer {
+    position: absolute; /* Position it absolutely */
+    bottom: 100px; /* Fixed distance from the bottom of the viewport */
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    width: 100%; /* Full width to center the buttons */
+}
+
+/* Buttons */
+button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 0 10px; /* Space between buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Copy quote button */
+#copyQuote {
+    background-color: #4caf50; /* Green background */
+    color: #ffffff; /* White text */
+}
+
+/* Tweet quote button */
+#tweetQuote {
+    background-color: #55acee; /* Twitter blue background */
+    color: #ffffff; /* White text */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    #quoteDisplay {
+        font-size: 1.5em; /* Smaller font size for smaller devices */
+    }
+
+    button {
+        font-size: 0.8em; /* Smaller buttons for smaller devices */
+    }
+
+    #siteTitle {
+        font-size: 1.5em; /* Smaller font size for smaller devices */
+    }
+}
+
+@media (max-width: 400px) {
+    #quoteDisplay {
+        font-size: 1.2em; /* Even smaller font size for very small devices */
+    }
+
+    #siteTitle {
+        font-size: 1.2em; /* Even smaller font size for very small devices */
+    }
+}
